@@ -9,6 +9,7 @@ android {
         applicationId "julliet.example.com.itshappening"
         minSdkVersion 14
         targetSdkVersion 24
+        multiDexEnabled true
         versionCode 1
         versionName "1.0"
     }
@@ -36,4 +37,5 @@ dependencies {
     compile 'com.googlecode.json-simple:json-simple:1.1'
     compile 'com.android.support:design:24.2.1'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'com.google.android.gms:play-services:9.8.0'
 }

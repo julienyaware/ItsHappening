@@ -3,11 +3,11 @@ package julliet.example.com.itshappening;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class Categories extends AppCompatActivity {
+public class Categories1 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_categories);
+        setContentView(R.layout.activity_categories1);
     }
 }
