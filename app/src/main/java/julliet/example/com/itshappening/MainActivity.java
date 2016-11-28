@@ -12,11 +12,7 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
-import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
@@ -87,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Launching All events Activity
-                Intent i = new Intent(getApplicationContext(), AllProductsActivity.class);
+                Intent i = new Intent(getApplicationContext(), AllEventsActivity.class);
                 startActivity(i);
 
             }
@@ -99,7 +95,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 // Launching create new product activity
-                Intent i = new Intent(getApplicationContext(), NewProductActivity.class);
+                Intent i = new Intent(getApplicationContext(), NewEventActivity.class);
                 startActivity(i);
 
             }

@@ -13,7 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.HashMap;
@@ -26,14 +26,15 @@ public class JulietMareka extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     private TextView txtName;
     private TextView txtEmail;
-    private Button btnLogout;
+    private ImageButton btnLogout;
 
     private SQLiteHandler db;
     private SessionManager session;
     private Toolbar mToolbar;
 
-    Button btnViewevents;
-    Button btnNewProduct;
+    ImageButton btnViewevents;
+    ImageButton btnNewProduct;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,16 +44,16 @@ public class JulietMareka extends AppCompatActivity
         setSupportActionBar(toolbar);
         txtName = (TextView) findViewById(R.id.name);
         txtEmail = (TextView) findViewById(R.id.email);
-        btnLogout = (Button) findViewById(R.id.btnLogout);
-        btnViewevents = (Button) findViewById(R.id.btnViewevents);
-        btnNewProduct = (Button) findViewById(R.id.btnCreateEvent);
+        btnLogout = (ImageButton) findViewById(R.id.btnLogout);
+        btnViewevents = (ImageButton) findViewById(R.id.btnViewevents);
+        btnNewProduct = (ImageButton) findViewById(R.id.btnCreateEvent);
 
         btnViewevents.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 // Launching All events Activity
-                Intent i = new Intent(getApplicationContext(), AllProductsActivity.class);
+                Intent i = new Intent(getApplicationContext(), AllEventsActivity.class);
                 startActivity(i);
 
             }
@@ -63,7 +64,7 @@ public class JulietMareka extends AppCompatActivity
             @Override
             public void onClick(View view) {
                 // Launching create new product activity
-                Intent i = new Intent(getApplicationContext(), NewProductActivity.class);
+                Intent i = new Intent(getApplicationContext(), NewEventActivity.class);
                 startActivity(i);
 
             }
@@ -154,17 +155,20 @@ public class JulietMareka extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.nav_recently) {
+            Intent recentlyintent1 = new Intent(this,AllEventsActivity.class);
+            startActivity(recentlyintent1);
+        } else if (id == R.id.nav_categories) {
+            Intent recentlyintent = new Intent(this,Categories1.class);
+            startActivity(recentlyintent);
+        } else if (id == R.id.nav_twitter) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_maps) {
+            Intent mapsintent = new Intent(this,MapsActivity.class);
+            startActivity(mapsintent);
+        } else if (id == R.id.nav_favorites) {
 
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_admin) {
 
         }
 
